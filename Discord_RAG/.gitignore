@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+
+# Env & Keys
+.env
+*.key
+
+# Logs
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# Data / models
+data/
+*.db

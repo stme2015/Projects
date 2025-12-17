@@ -1,0 +1,12 @@
+fastapi
+requests
+uvicorn[standard]
+pydantic
+prometheus_client
+voyageai
+google-genai
+PyMuPDF
+torch
+pymongo
+python-dotenv
+discord.py
