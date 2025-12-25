@@ -1,0 +1,36 @@
+# Core Python Dependencies
+numpy>=1.19.0
+scipy>=1.5.0
+pandas>=1.1.0
+
+# Machine Learning
+scikit-learn>=0.23.0
+
+# Visualization
+matplotlib>=3.3.0
+seaborn>=0.11.0
+
+# Big Data Processing
+# Note: PySpark is typically installed with Spark distribution
+# pyspark==2.4.7  # Uncomment if installing standalone
+
+# Jupyter Environment (for development)
+jupyter>=1.0.0
+notebook>=6.1.0
+ipython>=7.18.0
+
+# Kafka Python Client (optional, for testing)
+kafka-python>=2.0.2
+
+# Additional Utilities
+py4j>=0.10.9  # Required for PySpark
+
+# Hadoop/HDFS Integration
+# hdfs>=2.5.8  # Uncomment if needed for direct HDFS access
+
+# Note: The following are typically provided by the Hadoop cluster:
+# - Apache Spark 2.x
+# - Apache Kafka
+# - Apache Flume
+# - Hadoop HDFS
+# These should be configured in the cluster environment, not via pip

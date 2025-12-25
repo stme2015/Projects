@@ -1,0 +1,36 @@
+CustomerLoanDataAgent_2182B45.sources = CustomerSource_2182B45
+CustomerLoanDataAgent_2182B45.channels = CustomerChannel_2182B45
+CustomerLoanDataAgent_2182B45.sinks = CustomerSink_2182B45
+
+# Setting the source to spool directory where the file exists
+CustomerLoanDataAgent_2182B45.sources.CustomerSource_2182B45.type = spooldir
+CustomerLoanDataAgent_2182B45.sources.CustomerSource_2182B45.spoolDir = /home/2182B45/CS/
+
+# Setting the channel to memory
+CustomerLoanDataAgent_2182B45.channels.CustomerChannel_2182B45.type = memory
+
+# Max number of events stored in the memory channel
+CustomerLoanDataAgent_2182B45.channels.CustomerChannel_2182B45.capacity = 10000
+CustomerLoanDataAgent_2182B45.channels.CustomerChannel_2182B45.transactioncapacity = 1000
+
+# Setting the sink to HDFS
+CustomerLoanDataAgent_2182B45.sinks.CustomerSink_2182B45.type = hdfs
+CustomerLoanDataAgent_2182B45.sinks.CustomerSink_2182B45.hdfs.path = /user/2182B45//
+CustomerLoanDataAgent_2182B45.sinks.CustomerSink_2182B45.hdfs.fileType = DataStream
+
+# Write format can be text or writable
+CustomerLoanDataAgent_2182B45.sinks.CustomerSink_2182B45.hdfs.writeFormat = Text
+
+# use a single csv file at a time
+CustomerLoanDataAgent_2182B45.sinks.CustomerSink_2182B45.hdfs.maxOpenFiles = 1
+CustomerLoanDataAgent_2182B45.sinks.CustomerSink_2182B45.hdfs.callTimeout = 150000
+# rollover file based on maximum size of 10 MB
+CustomerLoanDataAgent_2182B45.sinks.CustomerSink_2182B45.hdfs.rollSize = 10485760
+# never rollover based on the number of events
+CustomerLoanDataAgent_2182B45.sinks.CustomerSink_2182B45.hdfs.rollCount = 0
+# rollover file based on max time of 1 min
+CustomerLoanDataAgent_2182B45.sinks.CustomerSink_2182B45.hdfs.rollInterval = 60
+
+# Connect source and sink with channel
+CustomerLoanDataAgent_2182B45.sources.CustomerSource_2182B45.channels = CustomerChannel_2182B45
+CustomerLoanDataAgent_2182B45.sinks.CustomerSink_2182B45.channel = CustomerChannel_2182B45
