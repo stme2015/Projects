@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+confluent-kafka
+python-dotenv
+pydantic
+langsmith
+feedparser
+openai
+requests
