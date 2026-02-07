@@ -1,0 +1,14 @@
+# Ignore Python cache files
+__pycache__/
+*.pyc
+*.pyo
+
+# Environment variables
+.env
+.venv/
+
+.log
+
+# SQLite temporary files
+*.db-shm
+*.db-wal
