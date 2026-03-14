@@ -1,16 +1,70 @@
 # Discord RAG Chatbot
 
 ## Overview
-A Discord chatbot that provides intelligent answers to user questions by retrieving relevant information from ingested PDF documents using Retrieval-Augmented Generation (RAG) techniques.
+A Discord chatbot that provides intelligent answers to user questions by retrieving relevant information from ingested PDF documents using **Retrieval-Augmented Generation (RAG) techniques**.
 
-## Architecture
-- **Frontend**: Discord bot interface for natural language queries
-- **Backend**: FastAPI REST API serving RAG functionality
-- **RAG Pipeline**: Document ingestion → Text chunking → Vector embeddings → Semantic search → LLM generation
-- **Storage**: MongoDB for vector storage and document chunks
-- **Monitoring**: Prometheus metrics collection and Grafana visualization
+## Architecture & Data Flow
+
+```
+
+                ┌──────────────────────┐
+                │       Discord User    │
+                │   /ask <question>     │
+                └───────────┬──────────┘
+                            │
+                            ▼
+                 ┌────────────────────┐
+                 │    Discord Bot     │
+                 │     (discord.py)   │
+                 └─────────┬──────────┘
+                           │ REST API
+                           ▼
+                  ┌────────────────────┐
+                  │      FastAPI       │
+                  │   Query Endpoint   │
+                  └─────────┬──────────┘
+                            │
+                            ▼
+                 ┌──────────────────────┐
+                 │     RAG Pipeline      │
+                 │                      │
+                 │ 1. Embed Query       │
+                 │ 2. Vector Search     │
+                 │ 3. Context Assembly  │
+                 │ 4. LLM Generation    │
+                 └─────────┬────────────┘
+                           │
+          ┌────────────────┴─────────────────┐
+          ▼                                  ▼
+  ┌───────────────┐                   ┌────────────────┐
+  │   MongoDB      │                  │   Gemini LLM   │
+  │ Vector Storage │                  │ Answer Gen     │
+  └───────────────┘                   └───────────────┘                  
+
+```
+
+### **System Workflow**
+1. **User Query** → Received via Discord /ask command.
+2. **Embedding** → Query is vectorized using Voyage AI (voyage-2).
+3. **Vector Search** → Semantic similarity search performed in MongoDB.
+4. **Retrieval** → Top-$K$ document chunks are retrieved as context.
+5. **Augmentation** → A structured prompt is constructed with the context.
+6. **Generation** → Google Gemini generates the final response.Response → Discord bot delivers the answer to the user.
+
+### **Project Structure**
+
+```
+app/
+├── api/         # FastAPI routes & request schemas
+├── rag/         # Core RAG logic (orchestration of retrieval + prompt)
+├── services/    # External integrations (Voyage AI, Gemini, MongoDB client)
+├── utils/       # Shared helpers (logging, PDF parsing, text cleaning)
+├── models/      # Pydantic models/Data classes
+└── config.py    # Environment variable loading & validation
+```
 
 ## Tech Stack
+
 - **Python** - Core language
 - **FastAPI** - REST API backend
 - **Discord.py** - Discord bot integration
@@ -57,6 +111,11 @@ A Discord chatbot that provides intelligent answers to user questions by retriev
    python bot.py
    ```
 
+## Usage
+1. **Ingest documents**: Use the `/api/ingest` endpoint to upload and process PDF documents.
+2. **Query via Discord**: Send `/ask [question]` in Discord to get AI-powered answers based on ingested documents
+3. **Monitor performance**: Access Prometheus metrics at `http://localhost:8001` and Grafana dashboard
+
 ## Key Decisions
 - **RAG Architecture**: Combines retrieval from knowledge base with generative AI for accurate, context-aware responses
 - **Vector Search**: Uses semantic similarity rather than keyword matching for better retrieval
@@ -65,7 +124,3 @@ A Discord chatbot that provides intelligent answers to user questions by retriev
 - **Observability**: Comprehensive metrics collection for performance monitoring
 - **Containerization**: Docker deployment for easy scaling and environment consistency
 
-## Usage
-1. **Ingest documents**: Use the `/api/ingest` endpoint to upload and process PDF documents
-2. **Query via Discord**: Send `/ask [question]` in Discord to get AI-powered answers based on ingested documents
-3. **Monitor performance**: Access Prometheus metrics at `http://localhost:8001` and Grafana dashboard
