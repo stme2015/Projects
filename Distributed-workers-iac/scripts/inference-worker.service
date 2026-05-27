@@ -1,0 +1,16 @@
+[Unit]
+Description=iii Inference Worker (Gemma)
+After=network.target
+
+[Service]
+Type=simple
+User=skpc
+WorkingDirectory=/home/skpc/hiring/may-2026/devops/quickstart
+Environment="PATH=/home/skpc/.local/bin:/usr/local/bin:/usr/bin:/bin"
+Environment="III_URL=ws://10.0.0.2:49134"
+ExecStart=/usr/bin/python3 workers/inference-worker/inference_worker.py
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
