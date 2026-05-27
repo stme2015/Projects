@@ -197,30 +197,14 @@ curl -X POST http://34.171.205.77:3111/v1/chat/completions \
 
 If this were being prepared for production, the next improvements would be:
 
-1. **TLS termination:** Put Nginx or Caddy in front of the engine so traffic is
-   encrypted with HTTPS.
-2. **Authentication:** Add API key or JWT validation in `caller-worker` before
-   forwarding requests to the engine.
-3. **Secrets management:** Store credentials in GCP Secret Manager instead of
-   environment variables.
-4. **Health checks and monitoring:** Add a `/health` endpoint and configure
-   Cloud Monitoring alerts.
-5. **Firewall hardening:** Restrict SSH access to trusted IP ranges instead of
-   allowing broad access.
-6. **Service reliability:** Keep `Restart=on-failure` and add memory limits,
-   logging, and rotation policies.
+1. **The firewall rule 0.0.0.0/0 for SSH can get hacked:** Need to restrict to secure IP or use IAP-only access and remove SSH from the firewall entirely.
+2. **The inference worker crashes silently:** I spent more time debugging this during deployment. In production I'd ship logs to Cloud Logging and set an alert if the worker process exits.
+3. **The engine has no auth:** anyone who finds port 3111 can call inference endpoint for free. A simple API key header check in the caller-worker stops that.
 
 ## Scaling for a 100x Larger Model
 
 If the model were about 100x larger, such as 27B parameters instead of 270M:
 
-1. **GPU instances:** Move `inference-vm` to a GPU-backed machine because CPU
-   inference would be too slow.
-2. **Model sharding:** Split the model across multiple GPUs or VMs if it no
-   longer fits on a single device.
-3. **Async inference:** Queue requests and let clients poll for results instead
-   of waiting synchronously.
-4. **Autoscaling:** Use Managed Instance Groups to scale inference capacity up
-   and down with demand.
-5. **Specialized serving:** Replace raw `transformers` inference with a serving
-   stack such as vLLM or TGI for batching and cache efficiency.
+1. **CPU inference is out at 27B:** even with 50 tokens it took few minutes on e2-highmem-4. A T4 GPU brings that to under 5 seconds.
+2. **The synchronous RPC chain breaks under load:** when inference takes 30+ seconds, connections pile up. The iii-queue worker is already in the stack, so we can use it. Client gets a job ID, polls for result.
+3. **Single inference VM becomes a bottleneck immediately:** need a Managed Instance Group behind the engine so multiple inference workers can share load.
