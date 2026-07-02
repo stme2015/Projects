@@ -1,6 +1,6 @@
 <div align="center">
 
-# Sridevi Turaga — AI Engineering Portfolio
+# Sridevi T — AI Engineer
 
 **AI Engineer · Multi-Agent Systems (arXiv) · RAG & Evaluation · LLM Fine-Tuning · Production Deployment · Cross-Functional Team Leadership**
 
