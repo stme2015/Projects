@@ -28,9 +28,11 @@ StylePilot is an AI-powered wardrobe and styling engine. It processes raw visual
 
 **Mobile to cloud integration.** Delivered a React Native application to 50+ iOS beta users using TestFlight, backed by a production AWS stack optimized to a strict $42/month baseline.
 
-## System Architecture
+## Performance Metrics
 
-![StylePilot Recommendation LLM Details](docs/stylepilot_recomm_llm.png)
+![StylePilot Chatbot Metrics](docs/chatbot_metrics.png)
+
+![StylePilot Tagging Metrics](docs/tagging_metrics.png)
 
 ## Stack
 
