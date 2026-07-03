@@ -8,7 +8,7 @@
 ## ABOUT ME
 AI Engineer and researcher with around 2 years shipping LLM systems, multi-agent architectures, and production ML pipelines, following a strong 6 years foundation in enterprise delivery. M.S. from NYU Tandon. Published researcher on arXiv. Founding engineer across three US startups spanning healthcare, real estate, and computer vision. 
 
-[Published Research](https://arxiv.org/abs/2603.16008)
+[Published Research On Multi-Agent Systems](https://arxiv.org/abs/2603.16008)
 
 ---
 
@@ -64,7 +64,7 @@ Engineered a geospatial climate predictor integrating National Risk Index climat
 
 ## Production-Grade AI Utilities
 
-A repository organizing standalone production tools across multi-agent orchestration, RAG pipelines, conversational AI, fine-tuning and optimization, predictive analytics, cloud infrastructure, and computer vision.
+A repository organizing standalone production-grade tools across multi-agent orchestration, RAG pipelines, conversational AI, fine-tuning and optimization, predictive analytics, cloud infrastructure, and computer vision.
 
 [View Repository](https://github.com/stme2015/production-ai-utilities)
 
@@ -72,8 +72,12 @@ A repository organizing standalone production tools across multi-agent orchestra
 
 ## Core Stack
 
-**Languages and Frameworks:** Python, TypeScript, Node.js, FastAPI, Express.js, Flutter, SQL, Docker
+**Languages and Frameworks:** Python, TypeScript, Next.js, Node.js, FastAPI, Express.js, Flutter, SQL, Docker
 
-**AI and Search:** LangGraph, OpenClaw, Microsoft AutoGen, CLIP, PyTorch, pgvector, HNSW, Cohere Rerank, HuggingFace
+**AI and RAG:** Microsoft AutoGen, LangGraph, LangChain, n8n, OpenClaw, CLIP, PyTorch, pgvector, HNSW, Cohere Rerank, HuggingFace
+
+**ML & Modeling:** PyTorch, TensorFlow, XGBoost, Scikit-learn, ONNX, Fine-tuning (DPO, QLoRA, LoRA, SFT, PEFT), Statistics, Modeling, ARIMA, NLP, Computer Vision
+
+**Databases:** PostgreSQL/PostGIS, Supabase, MongoDB, SQLite, Redis
 
 **Cloud and Infrastructure:** AWS (EC2, S3, SQS, RDS), GCP (Cloud Run, Cloud Tasks, Cloud SQL), Supabase, Firebase, Terraform, GitHub Actions
