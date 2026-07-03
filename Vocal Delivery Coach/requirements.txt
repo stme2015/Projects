@@ -1,7 +1,0 @@
-gradio
-speechrecognition
-numpy
-scipy
-librosa
-groq
-edge-tts

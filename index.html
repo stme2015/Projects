@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ankit | Founding AI Engineer Portfolio</title>
+    <style>
+        :root {
+            --bg: #0f172a;
+            --surface: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+            --accent-green: #34d399;
+            --accent-purple: #c084fc;
+            --border: #334155;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Hero Section Styling */
+        header {
+            text-align: center;
+            padding-bottom: 40px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            letter-spacing: -0.05em;
+        }
+
+        .subtitle {
+            color: var(--accent);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-top: 5px;
+        }
+
+        .bio-meta {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin: 15px 0 25px 0;
+        }
+
+        .cta-buttons a {
+            display: inline-block;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin: 5px;
+            transition: opacity 0.2s;
+        }
+
+        .btn-primary { background-color: var(--accent); color: var(--bg); }
+        .btn-secondary { border: 1px solid var(--border); color: var(--text-main); }
+        .cta-buttons a:hover { opacity: 0.9; }
+
+        /* Metrics Bar Styling */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .metric-card {
+            background-color: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .metric-val {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--accent);
+            margin-bottom: 5px;
+        }
+
+        .metric-lbl {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Section & Grid Header Layouts */
+        .section-title {
+            font-size: 1.6rem;
+            margin: 40px 0 20px 0;
+            border-left: 4px solid var(--accent);
+            padding-left: 12px;
+            letter-spacing: -0.02em;
+        }
+        
+        .title-products { border-left-color: var(--accent); }
+        .title-agents { border-left-color: var(--accent-purple); }
+        .title-research { border-left-color: var(--accent-green); }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            margin-bottom: 20px;
+        }
+
+        .project-card {
+            background-color: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .project-header h3 {
+            margin: 0 0 5px 0;
+            font-size: 1.3rem;
+            letter-spacing: -0.02em;
+        }
+
+        .tech-stack {
+            font-size: 0.8rem;
+            color: var(--accent);
+            font-family: monospace;
+            background: #1e293b;
+            padding: 4px 8px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 15px;
+            border: 1px solid var(--border);
+        }
+
+        /* Challenge-Resolution-Metric Scannable Structure */
+        .crm-block {
+            margin-bottom: 12px;
+            font-size: 0.92rem;
+        }
+
+        .crm-label {
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 0.05em;
+            display: block;
+            margin-bottom: 2px;
+        }
+        
+        .lbl-challenge { color: #f87171; }
+        .lbl-resolution { color: #60a5fa; }
+        .lbl-metric { color: #34d399; }
+
+        .crm-text {
+            color: var(--text-main);
+            margin: 0;
+        }
+
+        .project-link {
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .project-link:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Hero Header -->
+        <header>
+            <h1>ANKIT</h1>
+            <div class="subtitle">Lead AI & Machine Learning Infrastructure Engineer</div>
+            <div class="bio-meta">
+                2 YOE &bull; 3x Startup Veteran &bull; NYU Tandon STEM Graduate &bull; Available for E-Verified W-2 Placements
+            </div>
+            <div class="cta-buttons">
+                <a href="https://github.com" class="btn-primary" target="_blank">View GitHub Code Blueprints</a>
+                <a href="YOUR_RESUME_DOWNLOAD_LINK" class="btn-secondary">Download Complete Resume (PDF)</a>
+            </div>
+        </header>
+
+        <!-- Live Performance Metrics Dashboard -->
+        <section class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-val">90%</div>
+                <div class="metric-lbl">Pipeline Latency Drop</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-val">60%</div>
+                <div class="metric-lbl">Inference Cost Reduction</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-val">&lt;10ms</div>
+                <div class="metric-lbl">Vector Retrieval Speed</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-val">1st Place</div>
+                <div class="metric-lbl">NYU ML Competition</div>
+            </div>
+        </section>
+
+        <!-- Category 1: Commercial Startup Products -->
+        <h2 class="section-title title-products">Shipped Commercial Products</h2>
+        <section class="project-grid">
+            
+            <!-- HouSmart -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>HouSmart — Real Estate Intelligence Platform</h3>
+                    <span class="tech-stack">FastAPI | LangGraph | PostgreSQL/PostGIS | Asyncio | TTL Caching</span>
+                    <div class="crm-block">
+                        <span class="crm-label lbl-challenge">The Bottleneck</span>
+                        <p class="crm-text">Slow, sequential data-scraping workflows caused heavy execution latencies during multi-source extractions.</p>
+                    </div>
+                    <div class="crm-block">
+                        <span class="crm-label lbl-resolution">The Architecture</span>
+                        <p class="crm-text">Built an automated parallelized extraction pipeline running 10+ external APIs simultaneously. Integrated Human-in-the-Loop review states to resolve model schema failures.</p>
+                    </div>
+                    <div class="crm-block">
+                        <span class="crm-label lbl-metric">The Impact</span>
+                        <p class="crm-text">Reduced pipeline runtime by 90% and dropped processing costs to a baseline of $0.024 per execution run via strict TTL caching loops.</p>
+                    </div>
+                </div>
+                <a href="https://github.com/housmart-property-intelligence" class="project-link" target="_blank">View Code Architecture &rarr;</a>
+            </div>
+
+            <!-- RemiMinder AI -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>RemiMinder AI — HIPAA-Compliant Clinical Framework</h3>
+                    <span class="tech-stack">GCP Cloud Run | Docker | Cloud Tasks | Whisper STT | Supabase RLS</span>
+                    <div class="crm-block">
+                        <span class="crm-label lbl-challenge">The Bottleneck</span>
+                        <p class="crm-text">Deploying live multimodal pipelines required strict medical compliance constraints and bulletproof tenant data isolation profiles.</p>
+                    </div>
+                    <div class="crm-block">
+                        <span class="crm-label lbl-resolution">The Architecture</span>
+                        <p class="crm-text">Architected an isolated container topology under BAA constraints. Managed automated background exception queues and enforced complete row-level tenant security paths.</p>
+                    </div>
+                    <div class="crm-block">
+                        <span class="crm-label lbl-metric">The Impact</span>
+                        <p class="crm-text">Sustained 1,000+ monthly user interactions while cutting structural model inference overhead by 60% through custom empirical benchmarking testing.</p>
+                    </div>
+                </div>
+                <a href="https://github.com/remiminder-hipaa-multimodal-ai" class="project-link" target="_blank">View Code Architecture &rarr;</a>
+            </div>
+
+            <!-- StylePilot -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>StylePilot — Mobile Computer Vision Styling Engine</h3>
+                    <span class="tech-stack">AWS (EC2, SQS, pgvector) | CLIP ViT-B/32 | GPT-4o | React Native</span>
+                    <div class="crm-block">
+                        <span class="crm-label lbl-challenge">The Bottleneck</span>
+                        <p class="crm-text">Running multi-model computer vision clusters concurrently inflated monthly cloud infrastructure spending and caused downtime crashes.</p>
+                    </div>
+                    <div class="crm-block">
+                        <span class="crm-label lbl-resolution">The Architecture</span>
+                        <p class="crm-text">Deployed 5 distinct production models across 4 microservices. Designed a hybrid vector search network matching HNSW node routing with candidate model pruning rules.</p>
+                    </div>
+                    <div class="crm-block">
+                        <span class="crm-label lbl-metric">The Impact</span>
+                        <p class="crm-text">Shipped to 50+ iOS beta users via TestFlight, sustaining a sub-10ms query footprint on a strict $42/month AWS server baseline.</p>
+                    </div>
+                </div>
+                <a href="https://github.com/stylepilot-wardrobe-vision" class="project-link" target="_blank">View Code Architecture &rarr;</a>
+            </div>
+        </section>
+
+        <!-- Category 2: Elite Multi-Agent Orchestration -->
+        <h2 class="section-title title-agents">Elite Multi-Agent Orchestration</h2>
+        <section class="project-grid">
+            
+            <!-- CoDesignAI -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>CoDesignAI — Multi-Agent Urban Design Platform</h3>
+                    <span class="tech-stack">React 18 | TypeScript | Node.js | Gemini API | Google Maps API | Firestore</span>
+                    <div class="crm-block">
+                        <span class="crm-label lbl-challenge">The Bottleneck</span>
+                        <p class="crm-text">Traditional participatory urban design reaches only small, unrepresentative groups while expert facilitation does not scale across multiple simultaneous sessions.</p>
+                    </div>
+                    <div class="crm-block">
+                        <span class="crm-label lbl-resolution">The Architecture</span>
+                        <p class="crm-text">Architected a multi-user platform where community members co-design streets with specialized AI agents (Planner, Critic) operating on distinct tool-calling surfaces backed by spatial mapping APIs.</p>
+                    </div>
+                    <div class="crm-block">
+                        <span class="crm-label lbl-metric">The Impact</span>
+                        <p class="crm-text">Published at arXiv 2026. Enables scalable, repeatable participation across many groups while maintaining structured, professionally-informed facilitation.</p>
+                    </div>
+                </div>
+                <a href="https://github.com/codesign-multi-agent-urban" class="project-link" target="_blank">View Code Architecture &rarr;</a>
+            </div>
+
+            <!-- Research Papers Copilot -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>Research Papers Copilot — OpenClaw Multi-Agent Pipeline</h3>
+                    <span class="tech-stack">Python | OpenClaw Framework | arXiv API | Semantic Scholar | WhatsApp Interface</span>
+                    <div class="crm-block">
+                        <span class="crm-label lbl-challenge">The Bottleneck</span>
+                        <p class="crm-text">Manual literature review is time-consuming and prone to missing relevant papers or hallucinated citations in AI-generated summaries.</p>
+                    </div>
+                    <div class="crm-block">
+                        <span class="crm-label lbl-resolution">The Architecture</span>
+                        <p class="crm-text">Built a 6-agent sequential pipeline using latest OpenClaw tech. Features a dual-memory architecture (volatile runtime state + persistent context ledger) and an adversarial critic loop.</p>
+                    </div>
+                    <div class="crm-block">
+                        <span class="crm-label lbl-metric">The Impact</span>
+                        <p class="crm-text">Completely removes hallucinations via verbatim citation checking. Enables automated, accurate research synthesis across large paper corpora.</p>
+                    </div>
+                </div>
+                <a href="https://github.com/research-papers-copilot" class="project-link" target="_blank">View Code Architecture &rarr;</a>
+            </div>
+        </section>
+
+        <!-- Category 3: Advanced Data Science & Analytics -->
+        <h2 class="section-title title-research">Advanced Data Science & Analytics</h2>
+        <section class="project-grid">
+            
+            <!-- FEMA Disaster Assistance Predictor -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>FEMA Disaster Assistance Predictor — NYU Tandon Research</h3>
+                    <span class="tech-stack">Python | XGBoost | Wide & Deep Neural Networks | ArcGIS | National Risk Index Climate Data</span>
+                    <div class="crm-block">
+                        <span class="crm-label lbl-challenge">The Bottleneck</span>
+                        <p class="crm-text">Predicting federal disaster assistance eligibility requires integrating complex geospatial climate data with historical claim patterns across diverse disaster types.</p>
+                    </div>
+                    <div class="crm-block">
+                        <span class="crm-label lbl-resolution">The Architecture</span>
+                        <p class="crm-text">Engineered a geospatial climate predictor integrating historical claim variables using XGBoost and Wide & Deep neural networks with ArcGIS spatial feature engineering.</p>
+                    </div>
+                    <div class="crm-block">
+                        <span class="crm-label lbl-metric">The Impact</span>
+                        <p class="crm-text">Achieved optimal 6.23% MAPE score. Won 1st Place in NYU Tandon ML Competition.</p>
+                    </div>
+                </div>
+                <a href="https://github.com/fema-climate-predictor" class="project-link" target="_blank">View Code Architecture &rarr;</a>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>

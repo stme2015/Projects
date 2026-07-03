@@ -1,8 +1,0 @@
-# Add your Python dependencies here
-langchain==0.0.236
-langchain-google-genai
-google-generativeai
-langgraph
-faiss-cpu
-streamlit
-python-dotenv

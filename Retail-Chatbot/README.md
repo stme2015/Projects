@@ -1,3 +1,0 @@
-# AI Agent ProShop
-
-This project is designed to...

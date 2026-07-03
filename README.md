@@ -1,121 +1,79 @@
-<div align="center">
-
-# Sridevi T — AI Engineer
-
-**AI Engineer · Multi-Agent Systems (arXiv) · RAG & Evaluation · LLM Fine-Tuning · Production Deployment · Cross-Functional Team Leadership**
+# Sridevi Turaga
 
 [![Email](https://img.shields.io/badge/Email-sridevit.connect@gmail.com-D14836?style=flat&logo=gmail&logoColor=white)](mailto:sridevit.connect@gmail.com)
 [![NYU](https://img.shields.io/badge/M.S.-NYU%20Tandon%20%7C%20AI%20%26%20Urban%20Science-57068C?style=flat)](https://engineering.nyu.edu/academics/programs/applied-urban-science-and-informatics-ms)
 [![arXiv](https://img.shields.io/badge/arXiv-Published-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2603.16008)
 
-</div>
+
+## ABOUT ME
+AI Engineer and researcher with around 2 years shipping LLM systems, multi-agent architectures, and production ML pipelines, following a strong 6 years foundation in enterprise delivery. M.S. from NYU Tandon. Published researcher on arXiv. Founding engineer across three US startups spanning healthcare, real estate, and computer vision. 
+
+[Published Research](https://arxiv.org/abs/2603.16008)
 
 ---
 
-## About Me
+## Shipped Products
 
-I'm an AI engineer with experience building systems end-to-end from model layer through deployment. Over the past two years I've been a founding engineer at three early-stage startups, shipping production AI systems in healthcare, real estate, and fashion. Before that, six years of enterprise software delivery across the US and UK.
+### [HouSmart](https://github.com/stme2015/housmart) — Property Investment Intelligence Platform
+**FastAPI · Python · PostgreSQL/PostGIS · Asyncio · LangGraph · Gemini · Redis**
 
-I hold an M.S. from NYU and published research on multi-agent LLM systems (arXiv 2026). Most of what's in this portfolio came from real problems with real constraints: HIPAA compliance, live users, latency budgets, cost limits.
+Built an end-to-end property evaluation system that autonomously orchestrates 10+ external APIs (RentCast, FEMA, Census) in parallel. Designed human-in-the-loop review states to catch and correct LLM extraction failures. Reduced pipeline runtime by 90% using async execution and Redis-based caching. Cut per-property processing cost to $0.024.
 
-I work AI Full-Stack, and getting hands-on vibe-coding and agentic CLI workflows (Claude Code, OpenClaw) as part of my normal workflow.
+Live: [housmart.ai](https://www.housmart.ai)
 
----
+### [RemiMinder AI](https://github.com/stme2015/remiminder) — HIPAA-Compliant Patient Care Platform
+**Flutter · FastAPI · GCP Cloud Run · Cloud Tasks · Docker · Whisper · Gemini OCR · Supabase RLS · Firebase JWT**
 
-## Skills
+Deployed a multimodal clinical transcription pipeline handling speech-to-text, OCR, and LLM summarization on Cloud Run under a Business Associate Agreement. Benchmarked Whisper variants, GPT-4o, and Gemini across latency and cost to cut inference spend by 60%. Enforced tenant data isolation via Supabase Row-Level Security and Firebase JWT/JWKS authentication.
 
-**What I build with**
+Live: [remiminderai.com](https://remiminderai.com)
 
-Agent frameworks: LangGraph, OpenClaw, AutoGen, n8n
+### [StylePilot](https://github.com/stme2015/stylepilot-ai) — Computer Vision Styling Platform
+**CLIP ViT-B/32 · GPT-4o · pgvector · HNSW · FastAPI · AWS (EC2, S3, SQS, RDS) · React Native**
 
-LLM APIs: Anthropic, OpenAI, Groq, Gemini, HuggingFace
+Deployed 5 production vision and recommendation models across 4 containerized microservices with SQS worker queues for async reliability. Integrated pgvector HNSW indices with rule-based candidate pruning to keep search latency under 10ms while reducing downstream LLM calls by 90%. Shipped the complete React Native client to 50+ iOS beta users via TestFlight on a $42/month AWS infrastructure baseline.
 
-RAG and retrieval: ChromaDB, pgvector, Pinecone, MongoDB Atlas, LangChain
-
-Evaluation: LLM-as-Judge, golden datasets, LangSmith, Pydantic schema validation
-
-Voice and multimodal: Bland AI, Whisper, Librosa, CLIP, SAM-2
-
-**How I ship it**
-
-Backend: Python, FastAPI, Node.js, TypeScript
-
-Cloud: AWS (EC2, RDS, S3, SQS, Cognito), GCP (Cloud Run, Cloud Tasks, Cloud SQL)
-
-Infrastructure: Docker, Terraform, Kubernetes, GitHub Actions CI/CD
-
-Databases: PostgreSQL/PostGIS, Supabase, MongoDB, SQLite, Redis
-
-**How I think about quality**
-
-HITL triage, prompt caching, structured output validation, retry and fallback logic, cost and latency benchmarking, observability via LangSmith, Prometheus, Cloud Logging, JWT/JWKS, Supabase RLS, OAuth2/SSO
-
-**Day to day**
-
-Claude Code, Cursor, Antigravity, Agile delivery, cross-functional collaboration
+Live: [stylepilot.ai](https://stylepilot.ai)
 
 ---
 
-## Products and Systems
+## Multi-Agent Systems
 
-Three of these shipped to real users. One is a published research system. This is where my most complete work lives — full stack, real users, real constraints.
+### [CoDesign AI Urban Planner](https://github.com/stme2015/codesign-ai-urban-planner) — Multi-Agent Urban Design Platform
+**React 18 · TypeScript · Node.js · Gemini API · Google Maps API · Firestore · Google Cloud Storage**
 
+Published on arXiv (2026). Architected a multi-user platform where community members co-design street-level urban interventions with specialized AI agents (urban planner, accessibility specialist, facilitator), each operating on distinct tool-calling surfaces backed by spatial mapping APIs. Agents ground proposals in real geographic context, detect conflicts across participants, and synthesize structured outputs from unstructured community dialogue. Session transcripts are frozen to GCS and indexed to Firestore for continuity across rounds.
 
----
+### [OpenClaw Literature Review Agent](https://github.com/stme2015/openclaw-literature-review-agent) — Multi-Agent Research Pipeline
+**Python · OpenClaw · arXiv API · Semantic Scholar · WhatsApp**
 
-## Multi-Agent Orchestration
-
-Systems where multiple AI agents collaborate, divide work, and check each other's outputs. The interesting engineering here is orchestration: shared state, failure handling, knowing when to escalate to a human. Built across LangGraph, OpenClaw, AutoGen, and n8n.
-
-
----
-
-## RAG and Document Processing
-
-Retrieval is where a lot of AI products quietly break. Wrong chunks, stale embeddings, injected content slipping through. These projects cover a proper evaluation harness for RAG pipelines, prompt injection defenses, and a document automation tool that uses OCR and LLM extraction to fill structured templates from raw PDFs.
-
+Built a 6-agent sequential research assistant on the OpenClaw framework. Role-separated specialist agents coordinate through a dual-memory architecture: a volatile per-run pipeline state file for short-term inter-agent communication and a persistent cross-session ledger for long-term context accumulation. An adversarial critic agent enforces verbatim provenance anchors on all citations and issues loop-back corrections when sources cannot be verified, eliminating hallucination at the output stage.
 
 ---
 
-## Conversational AI Realtime
+## Machine Learning Research
 
-Real-time voice and chat systems have hard constraints that pure LLM work doesn't: latency, interruption handling, session memory across turns. A production telephony agent, a bi-directional voice chatbot with sliding-window context, and a mobile coaching app.
+### [FEMA Disaster Assistance Predictor](https://github.com/stme2015/fema-disaster-assistance-predictor) — NYU Tandon (1st Place)
+**Python · XGBoost · Wide and Deep Neural Networks · ArcGIS · National Risk Index**
 
+Engineered a geospatial climate predictor integrating National Risk Index climate variables with historical FEMA claim data across 100K+ records. Benchmarked XGBoost against Wide and Deep Neural Networks on accuracy and latency tradeoff, achieving a 6.23% MAPE score. Presented geospatial findings via ArcGIS StoryMap. Won 1st Place at the NYU ML Data Drive Competition.
 
----
-
-## Fine-Tuning and Optimization
-
-Fine-tuned a small language model with QLoRA and DPO on a single consumer GPU. Converted a classifier to ONNX INT8 for faster CPU inference. Ran a systematic comparison of prompt engineering strategies on a local quantized model.
-
+[View StoryMap](https://storymaps.arcgis.com/stories/249c7616cc87454f8f9058be3afac771)
 
 ---
 
-## Computer Vision Multimodal
+## Production-Grade AI Utilities
 
-Real-time hand tracking and segmentation pipeline using Meta's SAM2 and MediaPipe.
+A repository organizing standalone production tools across multi-agent orchestration, RAG pipelines, conversational AI, fine-tuning and optimization, predictive analytics, cloud infrastructure, and computer vision.
 
----
-
-## Predictive Analytics ML
-
-Regression, classification, time series, anomaly detection on real public datasets. Research-era work that grounds the AI engineering in proper ML thinking: feature engineering, model selection, evaluation methodology.
+[View Repository](https://github.com/stme2015/production-ai-utilities)
 
 ---
 
-## DevOps Cloud Infra
+## Core Stack
 
-Terraform, GCP, Kafka, Docker. Set up the infrastructure these systems run on, including a private inference cluster with no public-facing IP.
+**Languages and Frameworks:** Python, TypeScript, Node.js, FastAPI, Express.js, Flutter, SQL, Docker
 
+**AI and Search:** LangGraph, OpenClaw, Microsoft AutoGen, CLIP, PyTorch, pgvector, HNSW, Cohere Rerank, HuggingFace
 
----
-
-## Full-Stack UX Research
-
-A MERN networking platform, a UX redesign that measurably improved task completion, and a usability audit. NYU work that shows the product thinking behind the engineering.
-
----
-
-## Game Dev
-
-A 3D prototype in Godot. Built it because I wanted to.
+**Cloud and Infrastructure:** AWS (EC2, S3, SQS, RDS), GCP (Cloud Run, Cloud Tasks, Cloud SQL), Supabase, Firebase, Terraform, GitHub Actions
