@@ -6,7 +6,7 @@
 
 
 ## ABOUT ME
-AI Engineer and researcher with around 2 years shipping LLM systems, multi-agent architectures, and production ML pipelines, following a strong 6 years foundation in enterprise delivery. M.S. from NYU Tandon. Published researcher on arXiv. Founding engineer across three US startups spanning healthcare, real estate, and computer vision. 
+AI Engineer with around 2 years shipping LLM systems, multi-agent architectures, and production ML pipelines, following a strong 6 years foundation in enterprise delivery. M.S. from NYU Tandon. Published researcher on arXiv. Founding engineer across three US startups spanning healthcare, real estate, and computer vision. 
 
 [Published Research On Multi-Agent Systems](https://arxiv.org/abs/2603.16008)
 
