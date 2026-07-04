@@ -49,6 +49,12 @@ Published on arXiv (2026). Architected a multi-user platform where community mem
 
 Built a 6-agent sequential research assistant on the OpenClaw framework. Role-separated specialist agents coordinate through a dual-memory architecture: a volatile per-run pipeline state file for short-term inter-agent communication and a persistent cross-session ledger for long-term context accumulation. An adversarial critic agent enforces verbatim provenance anchors on all citations and issues loop-back corrections when sources cannot be verified, eliminating hallucination at the output stage.
 
+### ConResSim — Multi-Agent Conflict Mediation System
+**Python · Microsoft AutoGen · Gemini 2.5 Flash · Llama 3.3 · LLM-as-Judge**
+
+Presented at ICUA 2026. A multi-agent simulation system that models real-world group dialogues to detect emerging conflicts and apply theory-grounded mediation. Stakeholder agents operate with distinct roles and goals inside a shared group chat, while a Mediator agent orchestrates conflict detection and structured resolution across the session.
+
+
 ---
 
 ## Machine Learning Research
