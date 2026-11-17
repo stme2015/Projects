@@ -1,9 +1,9 @@
 # Sridevi Turaga
 
-[![Email](https://img.shields.io/badge/Email-sridevit.connect@gmail.com-D14836?style=flat&logo=gmail&logoColor=white)](mailto:sridevit.connect@gmail.com)
-[![NYU](https://img.shields.io/badge/M.S.-NYU%20Tandon%20%7C%20AI%20%26%20Urban%20Science-57068C?style=flat)](https://engineering.nyu.edu/academics/programs/applied-urban-science-and-informatics-ms)
-[![arXiv](https://img.shields.io/badge/arXiv-Published-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2603.16008)
-[![Claude Certified Architect](https://img.shields.io/badge/Claude%20Certified%20Architect-Professional-D97757?style=flat&logo=anthropic&logoColor=white)](https://www.credly.com/badges/604fceb9-1ed9-4672-b6bc-72dfcc4a214b)
+<a href="mailto:sridevit.connect@gmail.com"><img src="https://img.shields.io/badge/Email-sridevit.connect@gmail.com-D14836?style=flat&logo=gmail&logoColor=white" height="21" alt="Email"></a>
+<a href="https://engineering.nyu.edu/academics/programs/applied-urban-science-and-informatics-ms"><img src="https://img.shields.io/badge/M.S.-NYU%20Tandon%20%7C%20AI%20%26%20Urban%20Science-57068C?style=flat" height="21" alt="NYU"></a>
+<a href="https://arxiv.org/abs/2603.16008"><img src="https://img.shields.io/badge/arXiv-Published-B31B1B?style=flat&logo=arxiv&logoColor=white" height="21" alt="arXiv"></a>
+<a href="https://www.credly.com/badges/604fceb9-1ed9-4672-b6bc-72dfcc4a214b"><img src="https://img.shields.io/badge/Claude%20Certified%20Architect-Professional-D97757?style=flat&logo=anthropic&logoColor=white" height="21" alt="Claude Certified Architect"></a>
 
 
 ## ABOUT ME
@@ -79,7 +79,9 @@ A repository organizing standalone production-grade tools across multi-agent orc
 
 ## Certifications
 
-**Claude Certified Architect – Professional** · Anthropic (Nov 2026)
+**Claude Certified Architect – Professional (CCAR-P)** · Anthropic · Nov 2026  
+
+Enterprise-grade AI system integration (Model Context Protocol, API/agent-to-agent boundaries), multi-agent solution architecture, evaluation & cost/latency optimization, governance & safety guardrails (HITL, tool-scoped permissions, compliance controls), and production lifecycle management.
 
 ---
 
@@ -88,6 +90,8 @@ A repository organizing standalone production-grade tools across multi-agent orc
 **Languages and Frameworks:** Python, TypeScript, Next.js, Node.js, FastAPI, Express.js, Flutter, SQL, Docker
 
 **AI and RAG:** Microsoft AutoGen, LangGraph, LangChain, n8n, OpenClaw, CLIP, PyTorch, pgvector, HNSW, Cohere Rerank, HuggingFace
+
+**Claude & Agentic Systems:** Claude Agent SDK, Model Context Protocol (MCP), Claude Code (CLAUDE.md, CI/CD automation), Anthropic Messages API, Prompt Caching, Extended Thinking, Tool Lifecycle Hooks, Context Compaction, LLM-as-a-Judge
 
 **ML & Modeling:** PyTorch, TensorFlow, XGBoost, Scikit-learn, ONNX, Fine-tuning (DPO, QLoRA, LoRA, SFT, PEFT), Statistics, Modeling, ARIMA, NLP, Computer Vision
 
