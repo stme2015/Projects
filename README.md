@@ -3,10 +3,11 @@
 [![Email](https://img.shields.io/badge/Email-sridevit.connect@gmail.com-D14836?style=flat&logo=gmail&logoColor=white)](mailto:sridevit.connect@gmail.com)
 [![NYU](https://img.shields.io/badge/M.S.-NYU%20Tandon%20%7C%20AI%20%26%20Urban%20Science-57068C?style=flat)](https://engineering.nyu.edu/academics/programs/applied-urban-science-and-informatics-ms)
 [![arXiv](https://img.shields.io/badge/arXiv-Published-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2603.16008)
+[![Claude Certified Architect](https://img.shields.io/badge/Claude%20Certified%20Architect-Professional-D97757?style=flat&logo=anthropic&logoColor=white)](https://www.credly.com/badges/604fceb9-1ed9-4672-b6bc-72dfcc4a214b)
 
 
 ## ABOUT ME
-AI Engineer with around 2 years shipping LLM systems, multi-agent architectures, and production ML pipelines, following a strong 6 years foundation in enterprise delivery. M.S. from NYU Tandon. Published researcher on arXiv. Founding engineer across three US startups spanning healthcare, real estate, and computer vision. 
+AI Engineer with around 2 years shipping LLM systems, multi-agent architectures, and production ML pipelines, following a strong 6 years foundation in enterprise delivery. M.S. from NYU Tandon. Published researcher on arXiv. Founding engineer across three US startups spanning healthcare, real estate, and computer vision. Claude Certified Architect – Professional (Anthropic, Nov 2026). 
 
 [Published Research On Multi-Agent Systems](https://arxiv.org/abs/2603.16008)
 
@@ -73,6 +74,12 @@ Engineered a geospatial climate predictor integrating National Risk Index climat
 A repository organizing standalone production-grade tools across multi-agent orchestration, RAG pipelines, conversational AI, fine-tuning and optimization, predictive analytics, cloud infrastructure, and computer vision.
 
 [View Repository](https://github.com/stme2015/production-ai-utilities)
+
+---
+
+## Certifications
+
+**Claude Certified Architect – Professional** · Anthropic (Nov 2026)
 
 ---
 
