@@ -2,7 +2,7 @@
 
 **Live:** [housmart.ai](https://www.housmart.ai) | **Demo:** [YouTube](https://www.youtube.com/@HouSmart-v7c)
 
-FastAPI · Python · PostgreSQL/PostGIS · Asyncio · LangGraph · Gemini · Redis · Next.js · Vercel
+FastAPI · Python · PostgreSQL/PostGIS · Asyncio · Gemini · Redis · Next.js · Vercel
 
 ---
 
@@ -26,18 +26,14 @@ HouSmart autonomously evaluates any US property by orchestrating 10+ external da
 
 **Geospatial scoring.** PostGIS indexes translate raw latitude/longitude data from Census and FEMA sources into neighborhood-level risk scores, embedded directly into the final property verdict.
 
-## Cost Analysis
-
-![Cost Analysis](docs/cost_analysis_img.png)
-
 ## Stack
 
 | Layer | Technologies |
 |---|---|
 | API & Backend | FastAPI, Python, Asyncio |
-| AI & Orchestration | LangGraph, Gemini |
+| AI & Orchestration | Gemini |
 | Database | PostgreSQL, PostGIS, Supabase |
-| Caching | Redis (TTL-based) |
+| Caching | TTL-based |
 | Frontend | Next.js, TypeScript, Vercel |
 
 ## Metrics
